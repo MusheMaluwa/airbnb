@@ -1,0 +1,90 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Maluwa Mushe",
+      "email": "maluwa2324@gmail.com",
+      "phone": "066-888-8647"
+    },
+    {
+      "id": 2,
+      "name": "Tendeni Lukheli",
+      "email": "tendani@gmail.com",
+      "phone": "066-888-6759"
+    },
+    {
+      "email": "olivier@gmail.com",
+      "password": "$2a$10$OecShrB19ktubHsSR9tdGuu7iaLU03gwnVkLHn4CTL7VvYV9Av77q",
+      "id": "1OEEFBV"
+    },
+    {
+      "email": "olavier@gmail.com",
+      "password": "$2a$10$M3QuRqPEoM5zMK2Wh5j8z.lmUHTXo5xJ8JuHRCuYlbxqyZH4VxEQC",
+      "id": "3KklvIU"
+    },
+    {
+      "email": "olavier@gmail.com",
+      "password": "$2a$10$jyX9rHnOk2Gn5ZUEl7M/0eurpdn/iIA99oQpSSyRT9jYqc6XdGnGy",
+      "id": "yOl0jya"
+    },
+    {
+      "email": "taker@gmail.com",
+      "password": "$2a$10$ZpGR4ysU9d9bRHToRFneQumzqbpRdQ5wSHhum2UBhdady12RDqsBu",
+      "id": "6qiCTLG"
+    },
+    {
+      "email": "thembi@gmail.com",
+      "password": "$2a$10$DLLdsuzT75HoGD1WWiD0Ze63fAAcMIELvt3N6hla9mUQl4A5IrJ8a",
+      "id": "MQ3faga"
+    },
+    {
+      "email": "murendi@gmail.com",
+      "password": "$2a$10$0NZQsQTwTMwOY15EyGjUdu9QMaPlm52VkVUhFD1JaBRmy6XKLf2p2",
+      "id": "qFhCcm-"
+    }
+  ],
+  "bookings": [
+    {
+      "listingId": "1",
+      "startDate": "2024-08-28",
+      "endDate": "2025-08-28",
+      "userId": "1"
+    }
+  ],
+  "listings": [
+    {
+      "id": 1,
+      "img": "https://a0.muscache.com/im/pictures/prohost-api/Hosting-573814581763825673/original/720fac2e-3b70-4a1c-985b-3097424a2583.jpeg?im_w=720" ,
+      "title":"Online Experiences" ,
+      "description": "Unique activities we can do together, led by a world of hosts.",
+      "bath_num": 3,
+      "bed_num": 4,
+      "zip": 23456,
+      "address": "muite 66",
+      "city": "midrand",
+      "street": "Agege",
+      "price": "$569/night",
+      "sq_ft": 4.2,
+      "email": "gustavo2324@gmail.com",
+      "userId": 2
+    } ,
+    {
+      "id": 2,
+      "img": "https://i.insider.com/5d0d46702516e92db213a4bd?width=1200&format=jpeg" ,
+      "title":"Online Experiences" ,
+      "description": "Unique activities we can do together, led by a world of hosts.",
+      "bath_num": 3,
+      "bed_num": 4,
+      "zip": 23456,
+      "address": "muite 66",
+      "city": "midrand",
+      "street": "Agege",
+      "price":"$369/night",
+      "sq_ft": 4.2,
+      "email": "gustavo2324@gmail.com",
+      "userId": 2
+    } 
+  ]
+}
+     
+        

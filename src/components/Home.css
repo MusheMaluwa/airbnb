@@ -1,0 +1,11 @@
+.home_section {
+    display: flex;
+    padding: 30px;
+}
+
+.home_section_two{
+    display: flex;
+    padding: 30px;
+    align-items: center;
+    justify-content: center;
+}
