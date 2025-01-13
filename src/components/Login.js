@@ -1,7 +1,8 @@
 import React, {useEffect, useState} from 'react';
 import {useDispatch, useSelector} from 'react-redux';
 import {login} from '../action/UserAction';
-import {openModal} from '../action/ModalAction'
+import {openModal} from '../action/ModalAction';
+import { useNavigate } from 'react-router-dom';
 import './Login.css';
 
 const Login = () => {
@@ -9,24 +10,28 @@ const Login = () => {
   const [password, setPassword] = useState('');
 
   const dispatch = useDispatch();
+  const navigate = useNavigate();
 
-  const userLogin = useSelector(state => state.userLogin)
-  const {loading, error , userInfo} = userLogin
+  const userLogin = useSelector(state => state.userLogin);
+  const {loading, error , userInfo} = userLogin;
 
   useEffect(()=>{
     if(userInfo){
-        dispatch(openModal('closed',''))
+        dispatch(openModal('closed',''));
     }
-  }, [userInfo, dispatch])
-  
+  }, [userInfo, dispatch]);
 
   const submitLogin = (e) => {
-    e.preventDefault()
-    dispatch(login(email, password))
+    e.preventDefault();
+    dispatch(login(email, password));
   };
+
+  const redirectToSignup = () => {
+    navigate('/signup');
+  };
+
   return (
     <div className='login-form'>
-        <h2>Log in or Sign up</h2>
         {error && <h2>{error}</h2>}
         {loading && <h2>Loading...</h2>}
         <form onSubmit={submitLogin}>
@@ -52,10 +57,10 @@ const Login = () => {
             />
             <button className='sign-up-button'>Login</button>
             <div className='divider'></div>
-            <div>Don't have an account? Sign in</div>
+            <div>Don't have an account? <button className='sign-up-button' onClick={redirectToSignup}>Sign up</button></div>
         </form>
     </div>
-  )
+  );
 }
 
-export default Login
+export default Login;
