@@ -23,7 +23,7 @@ const Modal = () => {
   return (
     <div className='site-modal' style={modalInlineStyle}>
       <div className='modal-content'>
-        <div className='col right'>
+        <div>
           <span onClick={closeModalHandler} className='close'>
             &times;
           </span>

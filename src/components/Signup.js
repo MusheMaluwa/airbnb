@@ -1,80 +1,74 @@
-import React, { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
-import { useDispatch, useSelector } from 'react-redux';
+import React, { useState } from 'react';
+import { useDispatch } from 'react-redux';
 import { signup } from '../action/UserAction';
+import { useNavigate } from 'react-router-dom';
 import './Signup.css';
 
-const Signup = () => {
+const Signin = () => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [confirmPassword, setConfirmPassword] = useState('');
+  const [phone, setPhone] = useState('');  // Add phone state
 
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
-  const userSignup = useSelector((state) => state.userSignup);
-  const { loading, error, success } = userSignup;
-
-  useEffect(() => {
-    if (success) {
-      navigate('/login');
-    }
-  }, [success, navigate]);
-
   const submitSignup = (e) => {
     e.preventDefault();
-    if (password !== confirmPassword) {
-      alert('Passwords do not match');
-      return;
-    }
-    dispatch(signup(name, email, password));
+    dispatch(signup(name, email, password, phone));  // Pass phone number in signup action
+    navigate('/welcome');
   };
 
   return (
-    <div className="signup-form">
-      <h2>Sign Up</h2>
-      {error && <h2>{error}</h2>}
-      {loading && <h2>Loading...</h2>}
+    <div className='sign-form'>
+      <h2>Create Your Account</h2>
       <form onSubmit={submitSignup}>
-        <button className="facebook-signup">Connect with Facebook</button>
-        <button className="google-signup">Connect with Google</button>
-        <div className="signup-or center">
-          <span>or</span>
-          <div className="or-divider"></div>
-        </div>
         <input
-          type="text"
+          type='text'
           value={name}
           onChange={(e) => setName(e.target.value)}
-          className="browser-default"
-          placeholder="Full Name"
+          className='browser-default'
+          placeholder='Full Name'
+          required
         />
         <input
-          type="email"
+          type='email'
           value={email}
           onChange={(e) => setEmail(e.target.value)}
-          className="browser-default"
-          placeholder="Email Address"
+          className='browser-default'
+          placeholder='Email address'
+          required
         />
         <input
-          type="password"
+          type='password'
           value={password}
           onChange={(e) => setPassword(e.target.value)}
-          className="browser-default"
-          placeholder="Password"
+          className='browser-default'
+          placeholder='Password'
+          required
         />
         <input
-          type="password"
-          value={confirmPassword}
-          onChange={(e) => setConfirmPassword(e.target.value)}
-          className="browser-default"
-          placeholder="Confirm Password"
+          type='tel'
+          value={phone}
+          onChange={(e) => setPhone(e.target.value)}
+          className='browser-default'
+          placeholder='Phone number'
+          required
         />
-        <button className="sign-up-button">Sign Up</button>
+        <button className='sign-up-button'>Sign Up</button>
+        <div className='divider'></div>
+        <div>
+          Already have an account?{' '}
+          <button
+            className='signup-link'
+            onClick={() => navigate('/login')}
+          >
+            Log in
+          </button>
+        </div>
       </form>
     </div>
   );
 };
 
-export default Signup;
+export default Signin;

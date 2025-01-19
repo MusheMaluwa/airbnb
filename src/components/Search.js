@@ -29,7 +29,7 @@ const Search = () => {
         Number of guests <PeopleIcon />
       </h2>
       <input min={0} defaultValue={2} type='number' />
-      <Button>Search AirBnB</Button>
+      <Button >Search AirBnB</Button>
     </div>
   )
 }

@@ -1,11 +1,35 @@
 .footer{
+    width: Fixed (1,440px)px;
+    top: -3018px;
+    height: Hug (424px)px;
+    left: 2972px;
+    padding: 64px 80px 24px 80px;
+    gap: 48px;
+    opacity: 0px;
+    background-color: #f7f7f7;
+
+}
+
+.footer_one{
+    display: flex;  
+}
+
+.footer_column{
+   width: 302px;
+   height: 240px;
+   gap: 16px;
+}
+h4{
+    color: #4B5563;
+}
+
+.footer_two{
     border-top: 1px solid lightgrey;
     padding: 20px;
-    background-color: #f7f7f7;
     text-align: center;
 }
 
-.footer > p{
+.footer_two > p{
     padding: 5px;
     font-size: 14px;
 }

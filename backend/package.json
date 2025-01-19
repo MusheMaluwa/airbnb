@@ -10,6 +10,7 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "bcrypt": "^5.1.1",
     "json-server": "^1.0.0-beta.2",
     "json-server-auth": "^2.1.0",
     "mongoose": "^8.9.4"

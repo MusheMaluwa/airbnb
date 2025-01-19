@@ -18,9 +18,10 @@
 
 .header_center {
     display: flex;
+    justify-content: space-between;
     align-items: center;
     flex: 1;
-    max-width: fit-content;
+    max-width: 400px; 
     padding: 10px;
     height: 30px;
     border: 1px solid lightgray;
@@ -40,6 +41,14 @@
     justify-content: space-between;
     width: 15vw;
     margin-right: 80px;
+}
+
+p{
+    padding: 2px;
+}
+
+p:hover{
+    color: rgb(233, 90, 90);
 }
 
 .dropdown{
@@ -79,3 +88,9 @@
 .dropdown:hover .dropbtn {
     /* background-color: #3e8e41; */
 }
+
+.additional-component {
+    padding: 20px;
+    background-color: #f0f0f0;
+    border-top: 1px solid #ccc;
+  }

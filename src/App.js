@@ -5,6 +5,8 @@ import Home from './components/Home';
 import Footer from './components/Footer';
 import SearchPage from './components/SearchPage';
 import Modal from './components/Modal';
+import Listing from './components/Listing';
+
 
 const App = () => {
   const modal = useSelector(state => state.modal);
@@ -16,6 +18,8 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/search" element={<SearchPage />} />
+          <Route path="/listing" element={<Listing/>} />
+
         </Routes>
         {openClose === 'open' && <Modal />}
         <Footer />
