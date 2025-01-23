@@ -33,7 +33,7 @@ const Login = () => {
   };
 
   const redirectToSignup = () => {
-    navigate('/src/components/Signup.js');
+    navigate('/');
   };
 
   return (
