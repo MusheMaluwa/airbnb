@@ -16,11 +16,12 @@ const App = () => {
       <Router>
         <Header />
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" exact element={<Home />} />
           <Route path="/search" element={<SearchPage />} />
           <Route path="/listing" element={<Listing/>} />
 
         </Routes>
+        {/* <Route path="/" element={<Modal />} /> */}
         {openClose === 'open' && <Modal />}
         <Footer />
       </Router>

@@ -35,14 +35,11 @@ const Listing = () => {
                 <p className='header-one'>Entire rental unit hosted by Ghazal </p>             
                 <p className='header-details'>2 guests ⋅ 1 bedroom ⋅ 1 bed ⋅ 1 bath</p> 
               <div>                
-                  {/* <Avatar />    */}
                 </div>
                </div>              
         </div>
         <div className='right-content'>
-            dtj
         </div>
-        Bordeaux Getaway
       </div>
     </div>
   );

@@ -58,7 +58,7 @@ const Booking = mongoose.model("Booking", bookingSchema);
 
 app.post("/api/signup", async (req, res) => {
   try {
-    const { name, email, password } = req.body;
+    const { name, email, password, phone } = req.body;
 
     // Check if email already exists
     const existingUser = await User.findOne({ email });
@@ -74,6 +74,7 @@ app.post("/api/signup", async (req, res) => {
       name,
       email,
       password: hashedPassword,
+      phone
     });
     await newUser.save();
 

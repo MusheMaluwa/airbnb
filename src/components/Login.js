@@ -19,7 +19,7 @@ const Login = () => {
   useEffect(() => {
     if (userInfo) {
       dispatch(openModal('closed', '')); // Close the modal on successful login
-      navigate('/dashboard');  // Redirect to dashboard or another page
+      navigate('/');  // Redirect to dashboard or another page
     }
 
     if (userLoginError) {
@@ -33,7 +33,7 @@ const Login = () => {
   };
 
   const redirectToSignup = () => {
-    navigate('/signup');
+    navigate('/src/components/Signup.js');
   };
 
   return (
